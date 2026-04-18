@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width", initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var movie={
+            name:"bahubali",
+            year:2026,
+            hero:"Prabhas",
+            getinfo:function(){
+                console.log("Movie name: ",this.name)
+                console.log("Release year: ",this.year)
+                console.log("Hero Name: ",this.hero)
+                document.write("Movie name: ",this.name,"<br>")
+                document.write("Release year: ",this.year,"<br>")
+                document.write("Hero Name: ",this.hero)
+                
+            }
+        };
+        movie.getinfo()
+    </script>
+</body>
+</html>
