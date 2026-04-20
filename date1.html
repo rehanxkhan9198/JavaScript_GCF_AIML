@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Example</title>
+</head>
+<body>
+
+<script>
+    // Create date object
+    const date = new Date();
+
+    // 🔹 Format Dates
+
+    // MM/DD/YYYY (US)
+    let usFormat = (date.getMonth() + 1) + "/" + date.getDate() + "/" + date.getFullYear();
+
+    // DD/MM/YYYY (India)
+    let indiaFormat = date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
+
+    console.log("US Format:", usFormat);
+    console.log("India Format:", indiaFormat);
+
+
+    // 🔹 Add & Subtract Dates
+    const today = new Date();
+
+    // Add 5 days
+    let futureDate = new Date();
+    futureDate.setDate(today.getDate() + 5);
+
+    // Subtract 3 days
+    let pastDate = new Date();
+    pastDate.setDate(today.getDate() - 3);
+
+    console.log("Future Date:", futureDate);
+    console.log("Past Date:", pastDate);
+
+
+    // 🔹 Optional: Proper format with leading zeros
+    let day = String(date.getDate()).padStart(2, '0');
+    let month = String(date.getMonth() + 1).padStart(2, '0');
+
+    let indiaFormatClean = day + "/" + month + "/" + date.getFullYear();
+
+    console.log("India Format (Clean):", indiaFormatClean);
+
+</script>
+
+</body>
+</html>
